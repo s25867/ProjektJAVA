@@ -1,8 +1,7 @@
-package com.example.projektJAVA.web;
+package com.example.demo.web;
 
-import com.example.projektJAVA.exception.ResourceNotFoundException;
-import com.example.projektJAVA.model.Salesman;
-import com.example.projektJAVA.repository.SalesmenRepository;
+import com.example.demo.model.Salesman;
+import com.example.demo.repository.SalesmenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

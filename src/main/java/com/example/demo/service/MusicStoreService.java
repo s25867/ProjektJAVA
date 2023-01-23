@@ -1,8 +1,8 @@
-package com.example.projektJAVA.service;
+package com.example.demo.service;
 
-import com.example.projektJAVA.repository.AlbumsRepository;
-import com.example.projektJAVA.repository.SalesmenRepository;
-import com.example.projektJAVA.repository.UsersRepository;
+import com.example.demo.repository.AlbumsRepository;
+import com.example.demo.repository.SalesmenRepository;
+import com.example.demo.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

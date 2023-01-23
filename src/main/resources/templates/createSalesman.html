@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <title>Create salesman</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<form action="#" th:action="@{/salesmen/add}" th:object="${salesman}" method="post">
+    <input type="text" th:field="*{name}" />
+    <input type="text" th:field="*{surname}" />
+    <input type="number" min="10000000000" max="99999999999" th:field="*{pesel}" />
+    <input type="number" step=".01" th:field="*{salary}">
+    <input type="submit" value="add" />
+</form>
+</body>
+</html>

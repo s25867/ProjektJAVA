@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+    <head>
+        <title>Update album</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+
+    <body>
+        <h1>Existing album:</h1>
+        <p th:text="'Id: ' + ${existingAlbum.id}"/>
+        <p th:text="'Author: ' + ${existingAlbum.author}"/>
+        <p th:text="'Title: ' + ${existingAlbum.title}"/>
+
+        <p><h1>Updated album:</h1>
+        <form action="#" th:action="@{/albums/update/} + ${id}" th:object="${updatedAlbum}" method="post">
+            <p>Author: <input type="text" th:field="*{author}" />
+            <p>Title: <input type="text" th:field="*{title}" />
+            <p><input type="submit" value="add" />
+        </form>
+
+    </body>
+</html>

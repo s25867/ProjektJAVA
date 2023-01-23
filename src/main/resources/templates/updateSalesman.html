@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <title>Update salesman</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<h1>Existing salesman:</h1>
+<p th:text="'Id: ' + ${existingSalesman.id}"/>
+<p th:text="'Name: ' + ${existingSalesman.name}"/>
+<p th:text="'Surname: ' + ${existingSalesman.surname}"/>
+<p th:text="'Pesel: ' + ${existingSalesman.pesel}" />
+<p th:text="'Salary: ' + ${existingSalesman.salary}" />
+
+
+<p><h1>Updated salesman:</h1></p>
+<form action="#" th:action="@{/salesman/update/} + ${id}" th:object="${existingSalesman}" method="post">
+    <p>Name: <input type="text" th:field="*{name}" />
+    <p>Surname: <input type="text" th:field="*{surname}" />
+    <p>Pesel: <input type="number" min="10000000000" max="99999999999" th:field="*{pesel}" />
+    <p>Salary: <input type="number" step=".01" th:field="*{salary}" />
+    <p><input type="submit" value="add" />
+</form>
+
+</body>
+</html>

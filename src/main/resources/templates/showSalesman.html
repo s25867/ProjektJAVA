@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+    <head>
+        <title>Salesman</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+
+    <body>
+        <h1 th:text="${message}"/>
+        <p th:text="'Id: ' + ${salesman.id}"/>
+        <p th:text="'Name: ' + ${salesman.name}"/>
+        <p th:text="'Surname: ' + ${salesman.surname}"/>
+        <p th:text="'Pesel: ' + ${salesman.pesel}" />
+        <p th:text="'Salary: ' + ${salesman.salary}" />
+    </body>
+</html>

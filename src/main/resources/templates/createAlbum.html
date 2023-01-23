@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+    <head>
+        <title>Create album</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+
+    <body>
+        <p><h1>Create album:</h1></p>
+
+        <form action="#" th:action="@{/albums/add}" th:object="${album}" method="post">
+            <p>Author: <input type="text" th:field="*{author}" /> </p>
+            <p>Title: <input type="text" th:field="*{title}" /> </p>
+            <p><input type="submit" value="add" /> </p>
+        </form>
+
+    </body>
+</html>
